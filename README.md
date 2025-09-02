@@ -1,7 +1,3 @@
-===========================================
- SkillID Parser
-===========================================
-
 This tool parses Ragnarok Online style `.lub` files 
 (skillid.lub and skillinfolist.lub) and generates 
 text files mapping skill IDs, handles, and names.
@@ -32,44 +28,6 @@ text files mapping skill IDs, handles, and names.
    - skillnametable.txt
 
 -------------------------------------------
- OUTPUT FORMAT
--------------------------------------------
-SKILL_id_handle.txt
-    Each line:  <ID> <HANDLE>
-    Example:
-        1 NV_BASIC
-        89 MG_SAFETYWALL
-
-skillnametable.txt
-    Each line:  HANDLE#SkillName#
-    Example:
-        NV_BASIC#Basic Skill#
-        MG_SAFETYWALL#Safety Wall#
-
--------------------------------------------
- EXAMPLE WORKFLOW
--------------------------------------------
-Input: skillid.lub
-    SKID = {
-      NV_BASIC = 1,
-      MG_SAFETYWALL = 89,
-    }
-
-Input: skillinfolist.lub
-    SKILL_INFO_LIST = {
-      [SKID.NV_BASIC] = { SkillName = "Basic Skill" },
-      [89]            = { SkillName = "Safety Wall" }
-    }
-
-Output: SKILL_id_handle.txt
-    1 NV_BASIC
-    89 MG_SAFETYWALL
-
-Output: skillnametable.txt
-    NV_BASIC#Basic Skill#
-    MG_SAFETYWALL#Safety Wall#
-
--------------------------------------------
  NOTES
 -------------------------------------------
 - Requires `.lub` files already decompiled to text.
@@ -77,9 +35,7 @@ Output: skillnametable.txt
   will be empty.
 - Only extracts the `SkillName` field for now.
 
-
-
 -------------------------------------------
  AUTHOR
 -------------------------------------------
-AndenDev
+AndenDev 
